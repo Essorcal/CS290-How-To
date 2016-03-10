@@ -42,32 +42,81 @@
 <p>Even though for the amount of requests used to create this how to guide an API key was not required the steps to get one are laid out below for completeness and in case necessary. On the main Google documentation page <a href="https://developers.google.com/maps/documentation/javascript/">https://developers.google.com/maps/documentation/javascript/</a>
 Choose the following <strong>Get a Key</strong> option at the top</p>
 
-<p><img src="images/GetaKey.png"></p>
+<p><img src="%5Cimages%5CGetaKey.png"></p>
 
 <p>On the next screen <strong>Activate the Google Maps Javascript API</strong> choose <strong>Continue</strong>.</p>
 
-<p><img src="images/ActivateKey.png"></p>
+<p><img src="%5Cimages%5CActivateKey.jpg"></p>
 
 <p>Next create a new project and choose <strong>continue</strong>.</p>
 
-<p><img src="images/CreateProject.jpg"></p>
-
+<p><img src="https://github.com/Essorcal/CS290-How-To/blob/gh-pages/images/ActivateKey.jpg" alt="">
 On the credentials page choose create credentials and create a new API key.</p>
 
-<p><img src="images/APIKey.png"></p>
+<p><img src="https://github.com/Essorcal/CS290-How-To/blob/gh-pages/images/APIKey.png" alt=""></p>
 
 <p>Next choose <strong>browser key</strong></p>
 
-<p><img src="images/BrowserKey.png"></p>
+<p><img src="%5Cimages%5CBrowserKey.png"></p>
 
 <p>Finally name the browser key and input any HTTP referrers to limit API requests to only your sites so no one can use your API requests.</p>
 
-<p><img src="images/CreateKey.png"></p>
+<p><img src="%5Cimages%5CCreateKey.png"></p>
 
 <h3>
-<a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Creating pages manually</h3>
+<a id="adding-a-map" class="anchor" href="#adding-a-map" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Adding a Map</h3>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<p>In order to add a map to a web page i've added the following sample code which is a barebones example of initializing an HTML site and adding a map.  The map is centered on my hometown of Augusta Georgia!</p>
+
+<p>`&lt;!DOCTYPE html&gt;
+
+   </p>
+      
+
+<pre><code>  &lt;script&gt;
+     function loadMap() {
+
+        var mapOptions = {
+           center:new google.maps.LatLng(33.474246, -82.00967), 
+           zoom:10, 
+           mapTypeId:google.maps.MapTypeId.ROADMAP
+        };
+
+        var map = new google.maps.Map(document.getElementById("test"),mapOptions);
+     }
+
+     google.maps.event.addDomListener(window, 'load', loadMap);
+  &lt;/script&gt;
+</code></pre>
+
+<p></p>
+
+<p></p>
+      <div id="test"></div>
+   
+
+<p>`</p>
+
+<p>Now here is the result!</p>
+
+<p><img src="%5Cimages%5CMap.png"></p>
+
+<h3>
+<a id="walking-through-the-example" class="anchor" href="#walking-through-the-example" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Walking through the example</h3>
+
+<p>Google has very extensive documentation for all of their API's which can be overwhelming so this guide will be about starting at the absolute basics and going over available options and getting a map started and working from there.</p>
+
+<p>So the very first part of the non HTML code is setting the source for where the data the API we're accessing is.</p>
+
+<p>The first example below is the basic javascript API call without an individual API key
+''
+The next example is what needs to be added to that call to associate the API key the guide went over getting in the first section 
+'&lt;script src="<a href="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&amp;callback=initMap">https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&amp;callback=initMap</a>'</p>
+
+<p>YOUR_API_KEY is replaced with the series of letters and numbers generated when you create the API key.</p>
+
+<p>So a completed example could look like the following (fake API key used for the example)
+'&lt;script src="<a href="https://maps.googleapis.com/maps/api/js?key=HSD2349f12hfn28cn2109x8h3nc8je2o1icj9045&amp;callback=initMap">https://maps.googleapis.com/maps/api/js?key=HSD2349f12hfn28cn2109x8h3nc8je2o1icj9045&amp;callback=initMap</a>'</p>
 
 <h3>
 <a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Authors and Contributors</h3>
