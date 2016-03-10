@@ -72,6 +72,7 @@ Choose the following <strong>Get a Key</strong> option at the top</p>
 <pre><code>
 &lt;!DOCTYPE html&gt;
  
+  &lt;script src="http://maps.googleapis.com/maps/api/js"&gt;
   &lt;script&gt;
      function loadMap() {
 
@@ -104,10 +105,11 @@ Choose the following <strong>Get a Key</strong> option at the top</p>
 
 <p>So the very first part of the non HTML code is setting the source for where the data the API we're accessing is.</p>
 
-<p>The first example below is the basic javascript API call without an individual API key
-''
+<p>The first example below is the basic javascript API call without an individual API key </p>
+<pre><code><a> &lt;script src="http://maps.googleapis.com/maps/api/js"&gt;</a></code></pre>
 The next example is what needs to be added to that call to associate the API key the guide went over getting in the first section 
-'&lt;script src="<a href="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&amp;callback=initMap">https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&amp;callback=initMap</a>'</p>
+
+&lt;script src="<a href="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&amp;callback=initMap">https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&amp;callback=initMap</a>
 
 <p>YOUR_API_KEY is replaced with the series of letters and numbers generated when you create the API key.</p>
 
