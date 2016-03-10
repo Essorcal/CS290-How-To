@@ -117,7 +117,18 @@ The next example is what needs to be added to that call to associate the API key
 So a completed example could look like the following (fake API key used for the example)
 <pre><code><p>
 &lt;script src=" href="https://maps.googleapis.com/maps/api/js?key=HSD2349f12hfn28cn2109x8h3nc8je2o1icj9045&amp;callback=initMap"&gt;</p></code></pre>
+          
+<p>Within the create map function the next important piece is the <strong>var mapOptions</strong> </p>
 
+
+<p>
+Google provides many different map options to customize the map for all sorts of applications. There are 36 different map options which can all be found here: <a href="https://developers.google.com/maps/documentation/javascript/reference#MapOptions">Map option documentation</a></p>
+
+<p>Some of the most important options include the following which are required:
+<strong>center</strong> - The center of the map's latitude and longitude coordinates in the form <strong>center:new google.maps.LatLng(33.474246, -82.00967)</strong>
+<strong>zoom</strong> - The amount of the map that is shown by default in the form <strong>zoom:10</strong> the zoom will always be a number.  The smaller the number the closer in the default zoom.</p>
+<p>Some other options that are not required but are very useful include:
+<strong>mapTypeID</strong> - The kind of map that will be displayed in the form <strong>google.maps.MapTypeId.ROADMAP</strong> the options are <strong>ROADMAP</strong> - which is the standard map, <strong>SATELLITE</strong> which is satellite images, <strong>TERRAIN</strong> which shows physical features on the roadmap and <strong>HYBRID</strong> which is a satellite map that has roads depicted on it.</p>
 <h3>
 <a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Authors and Contributors</h3>
 
@@ -133,7 +144,7 @@ So a completed example could look like the following (fake API key used for the 
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
       <footer class="inner">
-        <p class="copyright">Google Maps API How to Guide maintained by <a href="https://github.com/Essorcal">Essorcal</a></p>
+        <p class="copyright">Google Maps API How to Guide maintained by <a href="https://github.com/Essorcal">Caleb Scott</a></p>
         <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
