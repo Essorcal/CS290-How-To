@@ -137,7 +137,24 @@ Google provides many different map options to customize the map for all sorts of
 
 <p>The next portion is the DOM listener event that triggers the map to load on the page load by using the 'load' option.</p>
 <pre><code>google.maps.event.addDomListener(window, 'load', loadMap);</code></pre>
+
+<p>The final portion of the initial code sets the size of the HTML container that the map will be generated in as shown below it is a rectangle whose width and height are determined in pixels</p>
+<pre><code>&lt;div id="test" style = "width:600px; height:600px;"&gt;&lt;/div&gt;</code></pre>
+
+<h3>
+<a id="conclusion" class="anchor" href="#conclusion" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Conclusion</h3>      
           
+<p>This is a very simple easy to understand way to add a custom google map to a website using HTML and Javascript.  When looking at the google maps API documentation as someone who is still pretty unsure about connecting to and working with API's the shear amount of documentation and options available it was overwhelming.  So this is a very beginners guide to using a very powerful API and getting something useful out of it.  Obviously there is a lot more that the Google maps API can do and this has been a starting point for me to start investigating what else could be doable with this API as well as other API's that google has available.</p>
+
+
+<pre><code>
+  
+
+  var marker=new google.maps.Marker({
+  position:markerLocation,
+  });
+
+marker.setMap(map);</code></pre>          
       </section>
     </div>
 
