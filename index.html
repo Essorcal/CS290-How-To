@@ -71,7 +71,8 @@ Choose the following <strong>Get a Key</strong> option at the top</p>
 
 <pre><code>
 &lt;!DOCTYPE html&gt;
- 
+  &lt;html&gt;
+     &lt;head&gt;
   &lt;script src="http://maps.googleapis.com/maps/api/js"&gt;
   &lt;script&gt;
      function loadMap() {
@@ -87,13 +88,12 @@ Choose the following <strong>Get a Key</strong> option at the top</p>
 
      google.maps.event.addDomListener(window, 'load', loadMap);
   &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+      <div id="test" style = "width:600px; height:600px;"></div>
+  &lt;/body&gt;
 </code></pre>
-
-<p></p>
-
-<p></p>
-      <div id="test"></div>
-   
+          
 <p>Now here is the result!</p>
 
 <p><img src="images/Map.png"></p>
@@ -109,7 +109,9 @@ Choose the following <strong>Get a Key</strong> option at the top</p>
 <pre><code><a> &lt;script src="http://maps.googleapis.com/maps/api/js"&gt;</a></code></pre>
 The next example is what needs to be added to that call to associate the API key the guide went over getting in the first section 
 
-&lt;script src="<a href="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&amp;callback=initMap">https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&amp;callback=initMap</a>
+
+<pre><code><p>
+&lt;script src="<a href="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&amp;callback=initMap">https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&amp;callback=initMap</a></p></code></pre>          
 
 <p>YOUR_API_KEY is replaced with the series of letters and numbers generated when you create the API key.</p>
 
